@@ -1,0 +1,40 @@
+<div class="converter">
+    <div class="inputGroup">
+        <mat-form-field >
+            <input type="number" matInput [(ngModel)]="first_amount" (keyup)="onType($event)" id="first_amount">
+        </mat-form-field>
+        <div class="divider"></div>
+        <!-- <input type="number" id="first_amount" [(ngModel)]="first_amount" (keyup)="onType($event)"> -->
+        <mat-form-field>
+            <mat-select [(value)]='first_currency' name="first_currency" id="first_currency" (selectionChange)="onChange($event)" >
+              <mat-option value="UAH">UAH</mat-option>
+              <mat-option value="USD">USD</mat-option>
+              <mat-option value="EUR">EUR</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- <select name="" id="first_currency" (change)="onChange($event)">
+            <option value="UAH">UAH</option>
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+        </select> -->
+    </div>
+    <div class="inputGroup">
+        <mat-form-field>
+            <input type="number" matInput [(ngModel)]="second_amount" (keyup)="onType($event)" id="second_amount">
+        </mat-form-field>
+        <div class="divider"></div>
+        <!-- <input type="number" id="second_amount" [(ngModel)]="second_amount" (keyup)="onType($event)"> -->
+        <mat-form-field>
+            <mat-select [(value)]='second_currency' name="second_currency" id="second_currency" (selectionChange)="onChange($event)" >
+              <mat-option value="UAH">UAH</mat-option>
+              <mat-option value="USD">USD</mat-option>
+              <mat-option value="EUR">EUR</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- <select name="" id="second_currency" (change)="onChange($event)">
+            <option value="UAH">UAH</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select> -->
+    </div>
+</div>
